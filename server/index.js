@@ -38,6 +38,34 @@ app.get("/getCards", (req, res) => {
     });
 });
 
+app.put("/edit", (req, res) => {
+    const { cod } = req.body;
+    const { name } = req.body;
+    const { price_cost } = req.body;
+    const { price_sell } = req.body;
+    const { packaging_cost } = req.body;
+    let SQL = "UPDATE Produtos SET nome = ?, preco_custo = ?, preco_venda = ?, custo_embalagem = ? WHERE cod = ?";
+    db.query(SQL, [name, price_cost, price_sell, packaging_cost, cod], (err, result) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send(result);
+      }
+    });
+  });
+
+  app.delete("/delete/:cod", (req, res) => {
+    const { cod } = req.params;
+    let SQL = "DELETE FROM Produtos WHERE cod = ?";
+    db.query(SQL, cod, (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    });
+  });
+
 //========= teste db =========================================================
 // app.get('/', (req, res) => {
 
