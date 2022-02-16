@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './App.css';
 import Axios from "axios";
 import Card from "./components/cards/card";
+import Navbar from "./components/navbars/navbar_products";
 
 const Products = () => {
     //setando as variáveis global
@@ -16,6 +17,7 @@ const Products = () => {
 
     return (
         <div>
+            <Navbar/>
             <h1>Lista de Produtos</h1>
 
             {typeof listProducts !== "undefined" && listProducts.map((value) => {

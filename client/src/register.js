@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from "react-router-dom";
 import Axios from "axios";
+import Navbar from "./components/navbars/navbar_register";
 
 const Usuario = () => {
     //setando as variáveis global
@@ -29,6 +30,7 @@ const Usuario = () => {
 
     return (
         <div className="app--container">
+            <Navbar/>
             <div className="register--container">
                 <h1>Cadastro de Produtos</h1>
                 <input
