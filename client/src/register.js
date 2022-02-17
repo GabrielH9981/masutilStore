@@ -26,6 +26,7 @@ const Usuario = () => {
         }).then((response) => {
             console.log("é ele: " + response);
         });
+        document.location.reload(true);
     };
 
     return (
