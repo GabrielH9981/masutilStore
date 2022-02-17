@@ -57,6 +57,7 @@ export default function FormDialog(props) {
         })
       );
     });
+    document.location.reload(true);
     handleClose();
   };
 
