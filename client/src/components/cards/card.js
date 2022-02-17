@@ -33,16 +33,17 @@ export default function Card(props){
             <div class="row row-cols-1" onClick={() => setOpen(true)}>
                 <div class="col">
                     <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">{props.name}</h5>
-                        <p class="card-text">
-                            Preço de Custo: R$ {props.price_cost} --|--  
-                            Preço de Venda: R$ {props.price_sell} --|-- 
-                            Custo da Embalagem: R$ {props.packaging_cost} --|-- 
-                            Lucro: R$ {lucro.toFixed(2)} --|--
-                            Margem de Lucro: {((lucro / preco_venda)*100).toFixed(2)}%
-                        </p>
-                    </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{props.name}</h5>
+                            <p class="card-text">
+                                SKU (BLING): {props.cod} &nbsp;&nbsp; | &nbsp;&nbsp;
+                                Preço de Custo: R$ {props.price_cost} &nbsp;&nbsp; | &nbsp;&nbsp;
+                                Preço de Venda: R$ {props.price_sell} &nbsp;&nbsp; | &nbsp;&nbsp;
+                                Custo da Embalagem: R$ {props.packaging_cost} &nbsp;&nbsp; | &nbsp;&nbsp;
+                                Lucro: R$ {lucro.toFixed(2)} &nbsp;&nbsp; | &nbsp;&nbsp;
+                                Margem de Lucro: {((lucro / preco_venda)*100).toFixed(2)}%
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

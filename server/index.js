@@ -25,7 +25,8 @@ app.post("/register", (req, res) => {
 
     let SQL = "INSERT INTO Produtos( cod, nome, preco_custo, preco_venda, custo_embalagem) VALUES (?, ?, ?, ?, ?)";
     db.query(SQL, [cod, name, price_cost, price_sell, packaging_cost], (err, result) => {
-        console.log(err);
+      if (err) console.log("deu erro nesse trem aqui: " + err);
+      else console.log("Ta Cadastrando com sucesso esse trem");
     });
 });
 

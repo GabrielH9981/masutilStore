@@ -18,7 +18,7 @@ const Products = () => {
     return (
         <div>
             <Navbar/>
-            <h1>Lista de Produtos</h1>
+            <center><h1>Lista de Produtos</h1></center>
 
             {typeof listProducts !== "undefined" && listProducts.map((value) => {
             //gera cada card e envia as info que ele precisa pra ser montado la no card.js
@@ -37,7 +37,7 @@ const Products = () => {
             );
             })}
 
-            <Link to="/">retornar a página inicial</Link>
+            {/* <Link to="/">retornar a página inicial</Link> */}
         </div>
     );
 }

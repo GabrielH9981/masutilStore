@@ -24,8 +24,6 @@ const Home = () =>{
         </div>
       </nav>
 
-
-
       {/* <h1>Página Inicial</h1>
       <nav>
         <ul>
